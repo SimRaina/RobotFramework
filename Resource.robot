@@ -5,7 +5,7 @@ Documentation     A resource file with reusable keywords and variables.
 ...               domain specific language. They utilize keywords provided
 ...               by the imported SeleniumLibrary.
 Library           SeleniumLibrary
-
+Library           ExcelLibrary
 
 *** Variables ***
 ${LandingURL}           https://opensource-demo.orangehrmlive.com/web/index.php
@@ -52,3 +52,12 @@ Login With Invalid Credentials Should Fail
 Login Should Have Failed
     Element Should Contain    //div[@class='oxd-alert-content oxd-alert-content--error']/p     ${error messsage}
     Log    Login is failed and error message is displayed  
+    
+
+Read Login Data
+    [Arguments]    ${filepath}       ${sheetname}        ${rownum}     ${colnum}
+    Open Excel Document        ${filepath}        1
+    Get Sheet    ${sheetname}
+    ${data}        Read Excel Cell                          ${rownum}               ${colnum}    
+    [Return]    ${data}
+    Close Current Excel Document
