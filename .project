@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.robotframework.ide.eclipse.main.plugin.robotNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>libspecs/SeleniumLibrary.py</name>
+			<type>1</type>
+			<location>C:/Users/SRaina/AppData/Local/Programs/Python/Python311/Lib/site-packages/SeleniumLibrary/keywords/browsermanagement.py</location>
+		</link>
+	</linkedResources>
 </projectDescription>
