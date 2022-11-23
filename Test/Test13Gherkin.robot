@@ -15,7 +15,7 @@ Valid Login
 *** Keywords ***
 Browser is opened to login page
     Open browser to login page
-
+    
 User "${username}" logs in with password "${password}"
     Input username    ${username}
     Input password    ${password}
